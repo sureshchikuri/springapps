@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="EmployeeProjectAnnot"
+  id="myeclipse.1446918953400"
+  context-root="/EmployeeProjectAnnot"
+  j2ee-spec="5.0"
+  archive="EmployeeProjectAnnot.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

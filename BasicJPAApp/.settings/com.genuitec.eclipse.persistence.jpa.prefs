@@ -1,0 +1,11 @@
+#Sat Jan 21 20:24:38 PST 2012
+connectionInfoProperty=suresh
+detect.m2m=false
+detect.o2o=false
+eclipse.preferences.version=1
+enableAnalysisProperty=true
+generate.version=false
+newSchemaProperty=SYSTEM
+re.settings=/BasicJPAApp/jpa.reveng.xml
+re.strategy=
+schemaProperty=SYSTEM

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="student" class="com.vcs.test.Student">
+<property name="studentDOB">
+<value>01-01-2001</value>
+</property>
+</bean>
+
+<bean id="simpleDateFormat" class="java.text.SimpleDateFormat">
+<constructor-arg>
+<value>yyyy-MM-dd</value>
+</constructor-arg>
+</bean>
+
+<bean id="customDateEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+<constructor-arg index="0">
+<ref bean="simpleDateFormat"/>
+</constructor-arg>
+<constructor-arg index="1">
+<value>true</value>
+</constructor-arg>
+</bean>
+<bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+<property name="customEditors">
+<map>
+<entry key="java.util.Date">
+<ref bean="customDateEditor"/>
+</entry>
+</map>
+</property>
+</bean>
+</beans>

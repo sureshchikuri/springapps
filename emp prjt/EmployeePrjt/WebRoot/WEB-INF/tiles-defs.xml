@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" 
+"http://jakarta.apache.org/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<definition name="baseTemplate" page="/jsp/tiles/baseLayout.jsp">
+		<put name="title" value="Employee" />
+		<put name="header" value="/jsp/tiles/header.jsp" />
+		<put name="menu" value="/jsp/tiles/menu.jsp" />
+		<put name="body" value="" />
+		<put name="footer" value="/jsp/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="home" extends="baseTemplate">
+		<put name="title" value="home" />
+		<put name="body" value="/jsp/common/home.jsp" />
+	</definition>
+
+	<definition name="employeeCreate" extends="baseTemplate">
+		<put name="title" value="Employee Details" />
+		<put name="body" value="/jsp/employee/employeeCreate.jsp" />
+	</definition>
+
+	<definition name="employeeSearch" extends="baseTemplate">
+		<put name="title" value="Employee Details" />
+		<put name="body" value="/jsp/employee/employeeSearch.jsp" />
+	</definition>
+
+</tiles-definitions>

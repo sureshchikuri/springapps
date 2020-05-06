@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="PERMISSIONS" schema="SYSTEM"
+		class="PermissionEntity">
+		<primary-key>
+			<key-column name="PERMISSION_ID" property="pid" />
+		</primary-key>
+		<column name="PERMISSION_NAME" property="name"></column>
+	</table>
+	<table name="ROLES" schema="SYSTEM" class="RoleEntity">
+		<primary-key>
+			<key-column name="ROLE_ID" property="rid" />
+		</primary-key>
+		<column name="ROLE_NAME" property="rName"></column>
+	</table>
+	<table name="USERS" schema="SYSTEM" class="UserEntity">
+		<primary-key>
+			<key-column name="USER_ID" property="userId" />
+		</primary-key>
+		<column name="FIRSTNAME" property="firstname"></column>
+		<column name="LASTNAME" property="lastname"></column>
+		<column name="ADDRESS" property="address"></column>
+		<column name="EMAIL" property="email"></column>
+		<column name="TELEPHONE" property="telephone"></column>
+		<column name="USERNAME" property="username"></column>
+		<column name="PASSWORD" property="password"></column>
+	</table>
+</hibernate-reverse-engineering>

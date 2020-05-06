@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="BasicWebProject">
+
+	<property name="classes.dir" value="${basedir}/build" />
+	<property name="source.dir" value="${basedir}/src" />
+	<property name="web.dir" value="${basedir}/WebRoot" />
+	<property name="lib.dir" value="${basedir}/WebRoot/WEB-INF/lib" />
+
+	<target name="clean">
+		<delete dir="${basedir}/build">
+		</delete>
+		<mkdir dir="${basedir}/build">
+		</mkdir>
+		<mkdir dir="${basedir}/build/WEB-INF">
+		</mkdir>
+		<mkdir dir="${basedir}/build/WEB-INF/classes">
+		</mkdir>
+		<mkdir dir="${basedir}/build/WEB-INF/lib">
+		</mkdir>
+	</target>
+
+	<path id="master-classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="compile" depends="clean">
+		<javac srcdir="${basedir}/src" destdir="${basedir}/build" source="1.5" target="1.6" classpathref="master-classpath" />
+	</target>
+
+	<target name="prepare" depends="compile">
+		<copy todir="${basedir}/build/WEB-INF/lib">
+			<fileset dir="${lib.dir}">
+				<include name="*.jar">
+				</include>
+			</fileset>
+		</copy>
+
+		<copy todir="${basedir}/build/com/vcs/">
+			<fileset dir="${basedir}/src/com/vcs/">
+				<include name="*.properties">
+				</include>
+			</fileset>
+		</copy>
+
+		<copy todir="${basedir}/build/WEB-INF">
+			<fileset dir="${basedir}/WebRoot/WEB-INF">
+				<include name="*.xml">
+				</include>
+			</fileset>
+		</copy>
+
+		<copy todir="${basedir}/build/">
+			<fileset dir="${web.dir}">
+				<include name="*.jsp">
+				</include>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="package" depends="prepare">
+		<war destfile="${basedir}/test.war" basedir="${basedir}/build/" webxml="${basedir}/build/WEB-INF/web.xml">
+		</war>
+	</target>
+
+	<target name="deploy" depends="package">
+		<copyfile dest="${deploy.dir}\test.war" src="${basedir}/test.war" />
+	</target>
+
+</project>

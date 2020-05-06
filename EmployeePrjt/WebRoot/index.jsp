@@ -1,0 +1,1 @@
+<a href=home.spr?action=home>Go to Home</a>

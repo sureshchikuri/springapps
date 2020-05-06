@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="BasicSimpleFormContrlr"
+  id="myeclipse.1327127115770"
+  context-root="/BasicSimpleFormContrlr"
+  j2ee-spec="5.0"
+  archive="BasicSimpleFormContrlr.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

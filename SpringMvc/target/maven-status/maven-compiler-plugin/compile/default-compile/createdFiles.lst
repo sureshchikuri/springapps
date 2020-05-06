@@ -1,0 +1,6 @@
+com\vcs\java\dao\StudentDaoImpl$1.class
+com\vcs\java\dao\StudentDaoImpl.class
+com\vcs\java\model\Student.class
+com\vcs\java\config\MvcConfiguration.class
+com\vcs\java\dao\StudentDao.class
+com\vcs\java\controller\HomeController.class

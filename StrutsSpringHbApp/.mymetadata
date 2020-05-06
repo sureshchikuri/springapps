@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="StrutsSpringHbApp"
+  id="myeclipse.1327075512013"
+  context-root="/StrutsSpringHbApp"
+  j2ee-spec="5.0"
+  archive="StrutsSpringHbApp.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
