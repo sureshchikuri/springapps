@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>Numebr to Word
+</head>
+<title>NumberToString</title>
+<script lang="type="text/JavaScript"">
+	function count() {
+
+		var inp = document.getElementById('number').value;
+
+		if (!isNaN(inp)) {
+
+			if (inp > 0 && inp < 999) {
+
+				var str = "";
+				var sNumber = inp.toString();
+				var units = [ '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six',
+						'Seven', 'Eight', 'Nine' ];
+				var randomer = [ '', 'Eleven', 'Twelve', 'Thirteen',
+						'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen',
+						'Eighteen', 'Nineteen' ];
+				var tens = [ '', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty',
+						'Sixty', 'Seventy', 'Eighty', 'Ninety' ];
+				var num = parseInt(sNumber);
+
+				if (sNumber.length > 2) { //for three digit
+
+					var hplace = sNumber.charAt(0);
+					str = units[hplace] + " hundred " + str;
+
+					if (sNumber.length > 1) {
+
+						var tensplace = sNumber.charAt(1);
+						str = str + tens[tensplace] + " ";
+
+						if (sNumber.length > 1) {
+
+							var unitsplace = sNumber.charAt(2);
+							str = str + units[unitsplace] + "";
+						}
+						alert(str);
+						return false;
+					}
+					return false;
+				}
+
+				if (sNumber.length > 1) { //for two digit
+
+					var tensplace = sNumber.charAt(0);
+					str = tens[tensplace] + " ";
+
+					if (sNumber.length > 1) {
+
+						var unitsplace = sNumber.charAt(1);
+						str = str + units[unitsplace] + "";
+					}
+					alert(str);
+					return false;
+				}
+
+				if (sNumber.length > 0) { //for one digit
+
+					var unitsplace = sNumber.charAt(0);
+					str = units[unitsplace] + "";
+
+					alert(str);
+					return false;
+				}
+
+				return false;
+			}
+
+			alert("Number greater than 999");
+			return false;
+		}
+	}
+</script>
+<body>
+	<form>
+		Number : <input type="text" id="number" name="number"> <br>
+		<input type="submit" value="submit" onclick="count()"></br>
+	</form>
+</body>
+</html>
+>

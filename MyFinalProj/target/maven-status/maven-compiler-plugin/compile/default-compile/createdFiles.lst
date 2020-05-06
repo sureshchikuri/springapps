@@ -1,0 +1,4 @@
+com\main\model\Movie.class
+com\main\repository\IMovieRepository.class
+com\main\application\Application.class
+com\main\controller\RestServiceController.class

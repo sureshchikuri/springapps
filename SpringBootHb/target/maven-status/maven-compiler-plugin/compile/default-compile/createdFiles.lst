@@ -1,0 +1,10 @@
+com\ws\spring\WebApplication.class
+com\ws\spring\config\HibernateConfiguration.class
+com\ws\spring\config\AppConfig.class
+com\ws\spring\service\EmployeeService.class
+com\ws\spring\service\EmployeeServiceImpl.class
+com\ws\spring\dao\EmployeeDao.class
+com\ws\spring\dao\EmployeeDaoImpl.class
+com\ws\spring\dao\AbstractDao.class
+com\ws\spring\controller\EmployeeController.class
+com\ws\spring\model\Employee.class
